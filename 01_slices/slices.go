@@ -2,19 +2,27 @@ package slices
 
 // Clone clones (returns a copy of) a slice
 func Clone(ns []int) []int {
-	//TODO: add implementation
-	return nil
+	return ns
 }
 
 // Contains returns true if ns contains n, false otherwise
 func Contains(ns []int, n int) bool {
 	//TODO: add implementation
+	for i := 0; i < len(ns); i++ {
+		if ns[i] == n {
+			return true
+		}
+	}
 	return false
 }
 
 // FirstIndexOf return the first index of n if ns contains n, -1 otherwise
 func FirstIndexOf(ns []int, n int) int {
-	//TODO: add implementation
+	for i := 0; i < len(ns); i++ {
+		if ns[i] == n {
+			return ns[0]
+		}
+	}
 	return -1
 }
 
@@ -26,8 +34,13 @@ func DeleteAt(ns []int, idx int) []int {
 
 // Deduplicate returns a slice with all distinct values of ns (no duplicates)
 func Deduplicate(ns []int) []int {
-	//TODO: add implementation
-	return nil
+	// valueSaver := []int{}
+
+	// for i := 0; i < len(ns); i++ {
+
+	// }
+
+	return ns
 }
 
 // Repeat returns a slice, where ns is cnt times repeated.
