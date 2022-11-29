@@ -30,7 +30,7 @@ func TestClone(t *testing.T) {
 		t.Run(fmt.Sprintf("test_%02d", i), func(t *testing.T) {
 			res := Clone(test.in)
 			if utils.SlicesPtrEqual(test.in, res) {
-				t.Fatalf("slices pointers are euqal")
+				t.Fatalf("slices pointers are equal")
 			}
 			if !reflect.DeepEqual(test.exp, res) {
 				t.Fatalf("want %v, have %v", test.exp, res)
@@ -99,7 +99,7 @@ func TestDeleteAt(t *testing.T) {
 		t.Run(fmt.Sprintf("test_%02d", i), func(t *testing.T) {
 			res := DeleteAt(test.in, test.idx)
 			if utils.SlicesPtrEqual(test.in, res) {
-				t.Fatalf("slices pointers are euqal")
+				t.Fatalf("slices pointers are equal")
 			}
 			if !reflect.DeepEqual(test.exp, res) {
 				t.Fatalf("want %v, have %v", test.exp, res)
@@ -126,7 +126,7 @@ func TestDeduplicate(t *testing.T) {
 		t.Run(fmt.Sprintf("test_%02d", i), func(t *testing.T) {
 			res := Deduplicate(test.in)
 			if utils.SlicesPtrEqual(test.in, res) {
-				t.Fatalf("slices pointers are euqal")
+				t.Fatalf("slices pointers are equal")
 			}
 			if !reflect.DeepEqual(test.exp, res) {
 				t.Fatalf("want %v, have %v", test.exp, res)
@@ -156,7 +156,7 @@ func TestRepeat(t *testing.T) {
 		t.Run(fmt.Sprintf("test_%02d", i), func(t *testing.T) {
 			res := Repeat(test.cnt, test.in...)
 			if utils.SlicesPtrEqual(test.in, res) {
-				t.Fatalf("slices pointers are euqal")
+				t.Fatalf("slices pointers are equal")
 			}
 			if !reflect.DeepEqual(test.exp, res) {
 				t.Fatalf("want %v, have %v", test.exp, res)
@@ -186,7 +186,7 @@ func TestFilter(t *testing.T) {
 		t.Run(fmt.Sprintf("test_%02d", i), func(t *testing.T) {
 			res := Filter(test.in, test.accept)
 			if utils.SlicesPtrEqual(test.in, res) {
-				t.Fatalf("slices pointers are euqal")
+				t.Fatalf("slices pointers are equal")
 			}
 			if !reflect.DeepEqual(test.exp, res) {
 				t.Fatalf("want %v, have %v", test.exp, res)
