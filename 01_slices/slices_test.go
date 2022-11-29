@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"reflect"
 	"testing"
+
+	"github.com/best4tires/go-train/utils"
 )
 
 func TestClone(t *testing.T) {
@@ -27,6 +29,9 @@ func TestClone(t *testing.T) {
 	for i, test := range tests {
 		t.Run(fmt.Sprintf("test_%02d", i), func(t *testing.T) {
 			res := Clone(test.in)
+			if utils.SlicesPtrEqual(test.in, res) {
+				t.Fatalf("slices pointers are euqal")
+			}
 			if !reflect.DeepEqual(test.exp, res) {
 				t.Fatalf("want %v, have %v", test.exp, res)
 			}
@@ -93,6 +98,9 @@ func TestDeleteAt(t *testing.T) {
 	for i, test := range tests {
 		t.Run(fmt.Sprintf("test_%02d", i), func(t *testing.T) {
 			res := DeleteAt(test.in, test.idx)
+			if utils.SlicesPtrEqual(test.in, res) {
+				t.Fatalf("slices pointers are euqal")
+			}
 			if !reflect.DeepEqual(test.exp, res) {
 				t.Fatalf("want %v, have %v", test.exp, res)
 			}
@@ -117,6 +125,9 @@ func TestDeduplicate(t *testing.T) {
 	for i, test := range tests {
 		t.Run(fmt.Sprintf("test_%02d", i), func(t *testing.T) {
 			res := Deduplicate(test.in)
+			if utils.SlicesPtrEqual(test.in, res) {
+				t.Fatalf("slices pointers are euqal")
+			}
 			if !reflect.DeepEqual(test.exp, res) {
 				t.Fatalf("want %v, have %v", test.exp, res)
 			}
@@ -144,6 +155,9 @@ func TestRepeat(t *testing.T) {
 	for i, test := range tests {
 		t.Run(fmt.Sprintf("test_%02d", i), func(t *testing.T) {
 			res := Repeat(test.cnt, test.in...)
+			if utils.SlicesPtrEqual(test.in, res) {
+				t.Fatalf("slices pointers are euqal")
+			}
 			if !reflect.DeepEqual(test.exp, res) {
 				t.Fatalf("want %v, have %v", test.exp, res)
 			}
@@ -171,6 +185,9 @@ func TestFilter(t *testing.T) {
 	for i, test := range tests {
 		t.Run(fmt.Sprintf("test_%02d", i), func(t *testing.T) {
 			res := Filter(test.in, test.accept)
+			if utils.SlicesPtrEqual(test.in, res) {
+				t.Fatalf("slices pointers are euqal")
+			}
 			if !reflect.DeepEqual(test.exp, res) {
 				t.Fatalf("want %v, have %v", test.exp, res)
 			}
