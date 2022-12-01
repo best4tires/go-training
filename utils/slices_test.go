@@ -15,4 +15,11 @@ func TestSlicesPtrEqual(t *testing.T) {
 	if !SlicesPtrEqual(ns1, ns3) {
 		t.Fatalf("want equal ptr, got not equal ptr")
 	}
+
+	e1 := []int{}
+	e2 := []int{}
+	if SlicesPtrEqual(e1, e2) {
+		t.Fatalf("slices ptr should not be equal")
+	}
+
 }
