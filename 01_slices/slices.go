@@ -2,7 +2,16 @@ package slices
 
 // Clone clones (returns a copy of) a slice
 func Clone(ns []int) []int {
-	return ns
+	newNs := []int{}
+	if ns == nil {
+		newNs = nil
+		return newNs
+	}
+
+	for i := 0; i < len(ns); i++ {
+		newNs = append(newNs, ns[i])
+	}
+	return newNs
 }
 
 // Contains returns true if ns contains n, false otherwise
