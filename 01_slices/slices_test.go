@@ -349,7 +349,7 @@ func TestAvg(t *testing.T) {
 	for i, test := range tests {
 		t.Run(fmt.Sprintf("test_%02d", i), func(t *testing.T) {
 			res := Avg(test.in)
-			if utils.EpsEqual(1e-6, test.exp, res) {
+			if !utils.EpsEqual(1e-6, test.exp, res) {
 				t.Fatalf("want %f, have %f", test.exp, res)
 			}
 		})
