@@ -49,3 +49,33 @@ func Chunks(ns []int, chunkSize int) [][]int {
 	// TODO: add implementation
 	return nil
 }
+
+// Replace replaces a value of ns at idx with the new value q and returns a new slice
+func Replace(ns []int, old int, new int) []int {
+	// TODO: add implementation
+	return nil
+}
+
+// Sum adds all values of ns together and returns the result. If the slice is empty it returns 0
+func Sum(ns []int) int {
+	// TODO: add implementation
+	return 0
+}
+
+// Avg returns the avarage of all values of ns and returns the result. If the slice is empty it returns 0
+func Avg(ns []int) float64 {
+	// TODO: add implementation
+	return 0
+}
+
+// Min returns the smallest value of ns
+func Min(ns []int) (int, error) {
+	// TODO: add implementation
+	return 0, nil
+}
+
+// Max returns the biggest value of ns
+func Max(ns []int) (int, error) {
+	// TODO: add implementation
+	return 0, nil
+}
