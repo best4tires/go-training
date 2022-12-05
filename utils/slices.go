@@ -19,5 +19,5 @@ func SlicesPtrEqual[T any](ts1 []T, ts2 []T) bool {
 }
 
 func EpsEqual(eps float64, f1, f2 float64) bool {
-	return math.Abs(f1-f2) < eps
+	return math.Abs(f1-f2) <= eps
 }
